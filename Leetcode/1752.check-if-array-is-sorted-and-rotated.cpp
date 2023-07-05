@@ -10,30 +10,11 @@ class Solution {
 public:
     bool check(vector<int>& nums) {
         int cnt = 0;
-         int n = nums.size();
-         int ind = 0;
-         while(n-1>0 && cnt == 0){
-            if(nums[ind] <= nums[ind+1] ){
-                ind++;
-                n--;
-            }
-            else{
-                cnt++;
-                ind++;
-                n--;
-            }
+        int n = nums.size();
+         for(int i = 0; i<n-1; i++){
+             if(nums[i]>nums[i+1]) cnt++;
          }
-         while(n-1>0 && cnt == 1){
-            if(nums[ind] <= nums[ind+1] && nums[ind+1] <= nums[0] ){
-                ind++;
-                n--;
-            }
-            else{
-                cnt++;
-                ind++;
-                n--;
-            }
-         }
+         if(nums[0] < nums[n-1]) cnt++;
          if(cnt > 1) return false;
          else return true;
     }

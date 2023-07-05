@@ -19,5 +19,6 @@
         "vector": "cpp",
         "initializer_list": "cpp",
         "regex": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
